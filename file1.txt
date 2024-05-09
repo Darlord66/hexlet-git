@@ -1,0 +1,7 @@
+select title, creator_id
+from articles
+where title IN (
+select first_name
+from users
+where first_name like 'A%'
+);
